@@ -7,6 +7,7 @@ const articleSchema = new mongoose.Schema({
   },
   description: {
     type: String
+    
   },
   markdown: {
     type: String,
@@ -15,15 +16,7 @@ const articleSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  },
-  slug: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  sanitizedHtml: {
-    type: String,
-    required: true
   }
+
 })
 module.exports = mongoose.model('Article', articleSchema)
